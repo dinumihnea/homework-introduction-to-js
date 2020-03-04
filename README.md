@@ -29,5 +29,4 @@ you can save each task implementation in a separate commit, using `git commit`
 
 ### Good Luck ;)
 
-In this project we're using [nodemon](https://nodemon.io/) for file changes monitoring, 
-this tool allow us not to run js code manually after each modification.
+[nodemon](https://nodemon.io/) is a utility that will monitor for any changes in your source and automatically restart your server. Perfect for development.
