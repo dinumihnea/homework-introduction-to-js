@@ -20,3 +20,6 @@
  */
 
 // Your code here.
+let width = 12;
+let height = 12;
+console.log(("# ".repeat(width) + "\n").repeat(height));
