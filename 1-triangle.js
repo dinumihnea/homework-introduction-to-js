@@ -18,3 +18,13 @@
  */
 
 // Your code here.
+let triangle = "";
+
+for (let i = 0; i < 7; i++) {
+  console.log((triangle = triangle + "#"));
+}
+
+while (triangle.length < 7) {
+  console.log(triangle);
+  triangle = triangle + "#";
+}
