@@ -20,4 +20,16 @@
  *
  */
 
-// Your code here.
+let size = 8;
+let result = "";
+let pound = true;
+for (let i = 0; i < size; i++) {
+    let rowPound = pound;
+    for (let j = 0; j < size; j++) {
+        rowPound ? result += "#" : result += " ";
+        rowPound = !rowPound;
+    }
+    result += "\n";
+    pound = !pound;
+}
+console.log(result);
