@@ -11,12 +11,9 @@
  *
  */
 
-// Your code here.
-//
-// Use these commands to test your code:
-//
-//console.log(min(0, 10));
-// → 0
-// console.log(min(0, -10));
-// → -10
-//
+let minArr = (arr) => {
+     return arr.reduce((acc, curr) => {
+        return acc < curr ? acc : curr;
+    });
+};
+console.log(minArr([2, 4, -4, 10, 0, -9, 17]));
