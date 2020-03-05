@@ -12,7 +12,7 @@
  */
 
 // Your code here.
-//
+
 // Use these commands to test your code:
 //
 //console.log(min(0, 10));
@@ -20,3 +20,16 @@
 // console.log(min(0, -10));
 // → -10
 //
+
+// 4.1
+const min = (x, y) => {
+  return Math.min(x, y);
+};
+console.log("min", min(0, 10));
+
+// 4.2
+const minArr = arr => {
+  return Math.min(...arr);
+};
+
+console.log("minArr", minArr([2, 4, -4, 10, 0, -9, 17]));
