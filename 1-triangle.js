@@ -16,5 +16,6 @@
  * let abc = "abc";
  * console.log(abc.length); → 3
  */
-
-// Your code here.
+for (let a = "#"; a.length <= 7; a += "#") {
+    console.log(a);
+}
