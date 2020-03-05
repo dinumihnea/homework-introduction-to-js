@@ -18,3 +18,22 @@
  */
 
 // Your code here.
+
+
+function repeat(str, num) {
+
+    // result string
+    let result = '';
+
+    // count the lines
+    for (let count = 1; count <= num; count++ ) {
+
+        // counts the number of symbols for each line    
+        while(result.length < count ) {
+            result += str;
+            console.log(result);
+        }}
+   
+  }
+
+repeat("#", 7);
