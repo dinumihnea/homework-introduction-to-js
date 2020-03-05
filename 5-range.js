@@ -25,25 +25,26 @@
 // → 55
 
 // 5.1
-const sum = arr => {
-  return arr.reduce((num, i) => num + i);
+const sum = (arr) => {
+  return arr.reduce((acc, item) => acc + item);
 };
-console.log(sum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+console.log("sum", sum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
 
 // 5.2
 const range = (start, end, step = 1) => {
   let arr = [];
   if (start >= end) {
-    for (let i = start; i >= end; i += step) {
+    for (let i = start; i >= end; i -= Math.abs(step)) {
       arr.push(i);
     }
     return arr;
   } else if (start < end) {
-    for (let i = start; i <= end; i -= step) {
+    for (let i = start; i <= end; i += Math.abs(step)) {
       arr.push(i);
     }
 
     return arr;
   }
+  return arr;
 };
 console.log("range", range(5, 2, -1));
