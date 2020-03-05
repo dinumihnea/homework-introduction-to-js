@@ -15,11 +15,38 @@
  *
  */
 
-// Your code here.
-//
-// console.log(range(1, 10));
-// → [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-// console.log(range(5, 2, -1));
-// → [5, 4, 3, 2]
-// console.log(sum(range(1, 10)));
-// → 55
+let range = (start, end, step) => {
+    if ((start < end && step < 0) || (start > end && step > 0) || (step === undefined && start > end)) {
+        return range(end, start, step);
+    }
+    let arr = [];
+    if (step !== undefined && step !== 0) {
+        if (step > 0) {
+            while (end >= start) {
+                arr.push(start);
+                start += step;
+            }
+        } else {
+            while (end <= start) {
+                arr.push(start);
+                start += step;
+            }
+        }
+    } else {
+        if (start <= end) {
+            return range(start, end, 1);
+        } else {
+            return range(start, end, -1);
+        }
+
+    }
+    return arr;
+};
+let sum = (arr) => {
+    return arr.reduce((acc, curr) => {
+        return acc + curr;
+    });
+};
+console.log(range(1, 10));
+console.log(range(5, 2, -1));
+console.log(sum(range(1, 10)));
