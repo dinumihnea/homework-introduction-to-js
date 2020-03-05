@@ -21,6 +21,23 @@
  */
 
 // Your code here.
-let width = 12;
-let height = 12;
-console.log(("# ".repeat(width) + "\n").repeat(height));
+
+const chessBoard = (size) => {
+  let board = "";
+
+  for (let i = 0; i < size; i++) {
+    for (let k = 0; k < size; k++) {
+      if ((i + k) % 2 == 0) {
+        board += "#";
+      } else {
+        board += " ";
+      }
+    }
+    board += "\n";
+  }
+
+  return board;
+};
+
+console.log("---------------");
+console.log(chessBoard(8));
