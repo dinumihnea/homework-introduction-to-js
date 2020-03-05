@@ -16,10 +16,34 @@
  */
 
 // Your code here.
-//
+
 // console.log(range(1, 10));
 // → [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 // console.log(range(5, 2, -1));
 // → [5, 4, 3, 2]
 // console.log(sum(range(1, 10)));
 // → 55
+
+// 5.1
+const sum = arr => {
+  return arr.reduce((num, i) => num + i);
+};
+console.log(sum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+
+// 5.2
+const range = (start, end, step = 1) => {
+  let arr = [];
+  if (start >= end) {
+    for (let i = start; i >= end; i += step) {
+      arr.push(i);
+    }
+    return arr;
+  } else if (start < end) {
+    for (let i = start; i <= end; i -= step) {
+      arr.push(i);
+    }
+
+    return arr;
+  }
+};
+console.log("range", range(5, 2, -1));
