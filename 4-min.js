@@ -11,6 +11,27 @@
  *
  */
 
+function minimum (number1, number2){
+    var array = [number1, number2];
+    var min = array[0];
+    for (var i = 1; i <= array.length; i++)
+    {
+        if(array[i] < min)
+        {
+            min = array[i];
+        }
+    }
+    console.log(min);
+}
+
+minimum(9,0);
+
+    /*
+
+    console.log(max_of_array = Math.min.apply(Math, array));
+
+    */
+
 // Your code here.
 //
 // Use these commands to test your code:

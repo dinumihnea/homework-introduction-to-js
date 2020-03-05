@@ -18,3 +18,15 @@
  */
 
 // Your code here.
+
+function triangle(){
+    let character = "#";
+    for(var i = 0; i <= 10; i++) {
+        for (var j = 1; j < i; j++) {
+            console.log(character.repeat(j));
+        }
+        console.log("\n");
+    }
+}
+
+triangle();

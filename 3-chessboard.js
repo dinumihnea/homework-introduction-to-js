@@ -20,4 +20,22 @@
  *
  */
 
-// Your code here.
+function chessboard (size){
+    var black = '#';
+    var white = ' ';
+    for (var i = 0; i < size; i++) {
+        black += '\n';
+
+        for (var j = 0; j < size; j++) {
+            if ((i +j) % 2 == 0) {
+                black  += white;
+            } else {
+                black  += "#";
+            }
+        }
+    }
+
+    console.log(black);
+}
+
+chessboard(10);

@@ -15,6 +15,47 @@
  *
  */
 
+function range( start, end, inc ) {
+    var result = [];
+
+    if ( inc == undefined )
+
+        inc = 1;
+
+    section = Math.abs( (end - start)/ inc ) + 1 ;
+
+    for ( var i = 0; i < section; i ++ ) {
+
+        result.push( start );
+
+        start += inc;
+    }
+
+    return result;
+}
+
+var showresult = range(1,9,1);
+
+console.log(showresult);
+
+
+
+function sum( arr ) {
+
+    var summ = 0;
+
+    section = arr.length;
+
+    for ( var i = 0; i < section; i ++ ) {
+
+        summ += arr[i];
+    }
+    return summ;
+}
+
+var showSum = sum(showresult);
+
+console.log(showSum);
 // Your code here.
 //
 // console.log(range(1, 10));
