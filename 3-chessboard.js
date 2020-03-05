@@ -21,3 +21,27 @@
  */
 
 // Your code here.
+let size = 8;
+let board = "";
+
+for (let i = 0; i < size; i++) {
+  for (let j = 0; j < size; j++) {
+    if ((j + i) % 2 == 0) board += "#";
+    else (j + i) % 2 == 0;
+    board += " ";
+  }
+  board += "\n";
+}
+console.log(board);
+
+let width = 3;
+let heigth = 6;
+let chessBoard = "";
+
+for (let i = 0; i < heigth; i++) {
+  for (let j = 0; j < width; j++) {
+    i % 2 == 0 ? (chessBoard += "#" + " ") : (chessBoard += " " + "#");
+  }
+  chessBoard += "\n";
+}
+console.log(chessBoard);
