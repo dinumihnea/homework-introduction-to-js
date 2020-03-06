@@ -17,4 +17,9 @@
  * console.log(abc.length); → 3
  */
 
-// Your code here.
+let output = '';
+for (let i = 0; i < 8; i++) {
+    let str = '#';
+    output += str;
+    console.log(output);
+}

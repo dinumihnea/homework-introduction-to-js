@@ -11,7 +11,20 @@
  *
  */
 
-// Your code here.
+function min(a,b) {
+    let minNumb;
+    minNumb = a < b ? a : b;
+    return minNumb;
+}
+
+function minArr(a) {
+    let minNumb = 0;
+    a.reduce(function (n, m) {
+        return (minNumb = n < m ? n : m);
+    });
+    return minNumb;
+}
+
 //
 // Use these commands to test your code:
 //
