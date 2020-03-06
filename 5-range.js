@@ -23,3 +23,47 @@
 // → [5, 4, 3, 2]
 // console.log(sum(range(1, 10)));
 // → 55
+
+// 5.1
+function range(start, end) {
+    return [...Array(end).keys()].map(i => i + start);
+}
+console.log(range(1,10));
+
+//sum function
+function sum(input){
+             
+             if (toString.call(input) !== "[object Array]")
+                return false;
+                  
+                        let total =  0;
+                        for(let i = 0; i < input.length; i++)
+                          {                  
+                            if(isNaN(input[i])){
+                            continue;
+                             }
+                              total += Number(input[i]);
+                           }
+                         return total;
+                        }
+            console.log(sum([1,2,3]));
+
+// 5.2
+function range(start, end, step) {
+
+  if (arguments.length === 1) {
+    end = start;
+    start = 0;
+  }
+
+  end = end || 0;
+  step = step || 1;
+
+  let arr = [];
+  for (arr; (end - start) * step > 0; start += step) {
+    arr.push(start);
+  }
+  return arr;
+}
+console.log(range(2));
+console.log(range(1,10,2));

@@ -20,3 +20,17 @@
 // console.log(min(0, -10));
 // → -10
 //
+
+// 4.1
+const min = (x, y)  => {
+    return Math.min(x, y);
+}
+
+console.log(min(7,3));//3
+
+// 4.2
+const minArray = arr => {
+    return Math.min(...arr);
+}
+
+console.log(minArray([2,3,4,1,-1]));

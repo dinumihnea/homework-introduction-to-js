@@ -17,4 +17,9 @@
  * console.log(abc.length); → 3
  */
 
-// Your code here.
+
+let triangle = "";
+for(let i = 0; i < 7; i++){
+  triangle += "#";
+  console.log(triangle);
+}
