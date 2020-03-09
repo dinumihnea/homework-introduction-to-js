@@ -16,37 +16,48 @@
  */
 
 let range = (start, end, step) => {
-    if ((start < end && step < 0) || (start > end && step > 0) || (step === undefined && start > end)) {
-        return range(end, start, step);
+    if (typeof start !== "number" || Number.isNaN(start) || typeof end !== "number" || Number.isNaN(end) || (typeof step !== "number" && typeof step !== "undefined") || Number.isNaN(step)) {
+        // console.log(typeof end !== "number" || Number.isNaN(end));
+        throw "Arguments must be numbers";
     }
-    let arr = [];
-    if (step !== undefined && step !== 0) {
+    let rangeArr = (start, end, step) => {
+        let arr = [];
         if (step > 0) {
-            while (end >= start) {
-                arr.push(start);
-                start += step;
+            for (let i = start; i <= end ; i += step) {
+                arr.push(i);
             }
         } else {
-            while (end <= start) {
-                arr.push(start);
-                start += step;
+            for (let i = start; i >= end ; i += step) {
+                arr.push(i);
             }
+        }
+        return arr;
+    };
+    if (step === 0 || step === undefined) {
+        if (start <= end) {
+            return rangeArr(start, end, 1);
+        } else {
+            return rangeArr(start, end, -1);
+        }
+    } else if (step > 0) {
+        if (start <= end) {
+            return rangeArr(start, end, step);
+        } else {
+            return rangeArr(end, start, step);
         }
     } else {
-        if (start <= end) {
-            return range(start, end, 1);
+        if (start >= end) {
+            return rangeArr(start, end, step);
         } else {
-            return range(start, end, -1);
+            return rangeArr(end, start, step);
         }
-
     }
-    return arr;
 };
 let sum = (arr) => {
-    return arr.reduce((acc, curr) => {
-        return acc + curr;
-    });
-};
+     return arr.reduce((acc, curr) => {
+         return acc + curr;
+     });
+ };
 console.log(range(1, 10));
 console.log(range(5, 2, -1));
 console.log(sum(range(1, 10)));
