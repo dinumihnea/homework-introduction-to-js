@@ -21,3 +21,33 @@
  */
 
 // Your code here.
+
+function chessboard(num) {
+
+    let result = '';
+
+    // Create pattern string
+    while(result.length <= num) {
+        if (result.length % 2 == 0) {
+            result += ' ';
+        } else {
+            result += '#';
+        }
+    }
+
+    // Calculate and print lines
+    for (let count = 0; count < num; count ++) {
+
+        let line = '';
+
+        if (count % 2 == 0) {
+            line = ' ' + result; 
+        } else {
+            line = result;
+        }
+        console.log(line);
+    }
+
+}
+
+chessboard(20);
