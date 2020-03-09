@@ -13,3 +13,24 @@
  */
 
 // Your code here.
+
+for(let count = 1; count <= 100; count++) {
+
+    // First check if number is divisible by both 
+    if (count % 3 == 0 && count % 5 == 0) {
+        console.log('FizzBuzz');
+    }
+    // Check if divisible 3 
+    else if (count % 3 == 0) {
+        console.log('Fizz');
+    }
+    // Check if divisible 5  
+    else if(count % 5 == 0) {
+        console.log('Buzz');
+    }
+    // If none of above is true then print the number itself 
+    else {
+        console.log(count);
+    }
+
+} 
