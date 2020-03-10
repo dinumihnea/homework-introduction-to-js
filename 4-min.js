@@ -23,13 +23,19 @@
 
 // 4.1
 const min = (x, y) => {
-  return Math.min(x, y);
+  return x >= y ? y : x;
 };
 console.log("min", min(0, 10));
 
 // 4.2
 const minArr = arr => {
-  return Math.min(...arr);
+  let min = arr[0];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < min) {
+      min = arr[i];
+    }
+  }
+  return min;
 };
 
 console.log("minArr", minArr([2, 4, -4, 10, 0, -9, 17]));
