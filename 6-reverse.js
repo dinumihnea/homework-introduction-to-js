@@ -9,5 +9,19 @@
 
 // Your code here.
 
-// console.log(reverseArray(["A", "B", "C"]));
+function reverseArray(array) {
+
+    let newArray = [];
+    let lastIndex = array.length -1;
+
+    for (let count = lastIndex; count >= 0; count--) {
+        
+        // Use method push on array to add elements to the end of array one by one
+        newArray.push(array[count]);
+    }
+
+    return newArray;
+}
+
+console.log(reverseArray(["A", "B", "C"]));
 // → ["C", "B", "A"];
