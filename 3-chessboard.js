@@ -23,19 +23,19 @@
 function chessboard (size){
     var black = '#';
     var white = ' ';
-    for (var i = 0; i < size; i++) {
-        black += '\n';
+    var board = "\n";
 
+    for (var i = 0; i < size; i++) {
         for (var j = 0; j < size; j++) {
             if ((i +j) % 2 == 0) {
-                black  += white;
+                board  += white;
             } else {
-                black  += "#";
+                board  += black;
             }
         }
+        board += "\n";
     }
-
-    console.log(black);
+    console.log(board);
 }
 
 chessboard(10);
