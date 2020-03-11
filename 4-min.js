@@ -19,7 +19,7 @@
 // → 0
 // console.log(min(0, -10));
 // → -10
-//
+
 // 4.1
 let number1 = Number(prompt("Write the first number", "1"));
 let number2 = Number(prompt("Write the second number", "1"));
