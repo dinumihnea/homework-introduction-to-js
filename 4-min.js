@@ -21,16 +21,14 @@
 // → -10
 
 // 4.1
-let number1 = Number(prompt("Write the first number", "1"));
-let number2 = Number(prompt("Write the second number", "1"));
 function getMin(number1, number2) {
-    if (number1 < number2) {
-        return number1;
-    } else {
-        return number2;
-    }
+  if (number1 < number2) {
+      return number1;
+  } else {
+      return number2;
+  }
 }
-console.log(getMin(number1, number2));
+console.log(getMin(1, -1));
 
 
 // 4.2
