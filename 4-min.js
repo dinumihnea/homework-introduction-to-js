@@ -12,11 +12,25 @@
  */
 
 // Your code here.
-//
+
+// ########## two arguments version
+function min(a, b){
+    return a > b ? b : a;
+}
+
+// ########## array version
+function arrayMin(arr){
+    let min = 999;
+    arr.forEach(element => {
+        min = element < min ? element : min;
+    });
+    return min;
+}
 // Use these commands to test your code:
 //
-//console.log(min(0, 10));
+console.log(min(0, 10));
 // → 0
-// console.log(min(0, -10));
+console.log(min(0, -10));
 // → -10
 //
+console.log(arrayMin([5,2,90,19]));
