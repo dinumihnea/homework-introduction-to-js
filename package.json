@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/dinumihnea/homework-introduction-to-js#readme",
   "dependencies": {
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.4"
   }
 }
