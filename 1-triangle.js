@@ -15,5 +15,7 @@
  * Try to find the most optimal way to do this.
  *
  */
-
-// Your code here.
+let string = ''
+for(let i = 0; i < 7; i++){
+    console.log(string += '#')
+}

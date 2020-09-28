@@ -11,12 +11,22 @@
  *
  */
 
-// Your code here.
+function min(n1,n2){
+    return (n1 < n2) ? n1 : n2;
+}
+function minArr(arr){
+    let minNum = arr[0];
+  arr.forEach((item) => {
+      if(item <= minNum){ minNum = item}
+  });
+  return minNum;
+}
 //
 // Use these commands to test your code:
 //
-//console.log(min(0, 10));
+console.log(min(0, 10));
 // → 0
-// console.log(min(0, -10));
+ console.log(min(0, -10));
 // → -10
 //
+console.log(minArr([2, 4, -4, 10, 0, -9, 17]));
