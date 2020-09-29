@@ -9,5 +9,16 @@
 
 // Your code here.
 
+function reverseArray(arr) {
+    let reverseArr = [];
+    for (let i = 0; i < arr.length / 2; i++) {
+        reverseArr[i] = arr[arr.length - i - 1];
+        reverseArr[arr.length - i - 1] = arr[i];
+    }
+    return reverseArr;
+    // return arr.reverse();
+}
+console.log(reverseArray(["A", "B", "C"]));
+
 // console.log(reverseArray(["A", "B", "C"]));
 // → ["C", "B", "A"];
