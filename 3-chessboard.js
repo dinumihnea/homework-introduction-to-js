@@ -21,3 +21,23 @@
  */
 
 // Your code here.
+function setChessboard(bindingSize) {
+    for(let i = 0; i < bindingSize; i++) {
+        let str = '';
+        for(let j = 0; j < bindingSize; j++) {
+            let oddSymbol = ' ';
+            let evenSymbol = '#';
+            if (i % 2 === 0) {
+                oddSymbol = '#';
+                evenSymbol = ' ';
+            }
+            if (j % 2 == 0) {
+                str += oddSymbol;
+            } else {
+                str += evenSymbol;
+            }
+        }
+        console.log(str);
+    }
+}
+setChessboard(8);
