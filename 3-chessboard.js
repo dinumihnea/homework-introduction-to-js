@@ -21,3 +21,27 @@
  */
 
 // Your code here.
+bigChessboard = function (n) {
+  let chessboard = "";
+  for (let k = 0; k < n; k++) {
+    if (k % 2 === 0) {
+      chessboard = "";
+      for (let i = 0; i < n; i++) {
+        if (i % 2 === 0) {
+          chessboard += "#";
+        } else {
+          chessboard += " ";
+        }
+      }
+      console.log(chessboard);
+    } else {
+      console.log(" " + chessboard);
+    }
+  }
+};
+
+bigChessboard(8);
+console.log("next");
+bigChessboard(6);
+console.log("next");
+bigChessboard(5);
