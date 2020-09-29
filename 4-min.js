@@ -13,6 +13,21 @@
 
 // Your code here.
 //
+function minimum(a, b) {
+   return a < b ? a : b;
+}
+console.log(minimum(0, 10));
+
+function minArr(arr) {
+    let min = arr[0];
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] < min) {
+            min = arr[i];
+        }
+    }
+    return min;
+}
+console.log(minArr([2, 4, -34, 10, 0, -9, -25]));
 // Use these commands to test your code:
 //
 //console.log(min(0, 10));
