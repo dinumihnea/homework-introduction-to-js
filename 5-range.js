@@ -17,6 +17,53 @@
 
 // Your code here.
 //
+function range(start, end) {
+    let arr = [];
+    for (let i = start; i <= end; i++) {
+        arr.push(i);
+    }
+    return arr;
+}
+console.log(range(1, 10));
+
+function sum(arr) {
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        count += arr[i];
+    }
+    return count;
+//  return arr.reduce((sum, current) => sum + current);
+}
+console.log(sum(range(1, 10)));
+
+function optRange(start, end, step) {
+    if(typeof step === 'undefined') {
+        step = end > start ? 1 : -1;
+    } else if (start < end && step < 0) {
+        console.log('When end is bigger than start, step should be positive')
+        return [];
+    } else if (start > end && step > 0) {
+        console.log('When start is bigger than end, step should be negative')
+        return [];
+    }
+
+    let shouldReverse = start > end && step < 0;
+    let arr = [];
+    if(shouldReverse) {
+        let first = start;
+        start = end;
+        end = first;
+        step *= -1;
+    }
+
+    for (let i = start; i <= end; i+=step) {
+        arr.push(i);
+    }
+
+    return shouldReverse ? arr.reverse() : arr;
+}
+console.log(optRange(8, 2));
+
 // console.log(range(1, 10));
 // → [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 // console.log(range(5, 2, -1));
