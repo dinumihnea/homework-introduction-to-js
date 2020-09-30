@@ -21,3 +21,24 @@
  */
 
 // Your code here.
+
+let row = "";
+
+const chessBoard = (width, height) => {
+  for (let i = 1; i <= width; i++) {
+    for (let j = 1; j <= height; j++) {
+      if ((i + j) % 2 === 0) {
+        row += "#";
+      } else {
+        row += " ";
+      }
+    }
+    row += "\n";
+  }
+  return row;
+};
+
+console.log(chessBoard(8, 8));
+
+// giving another size example:
+// console.log(chessBoard(15,15));
