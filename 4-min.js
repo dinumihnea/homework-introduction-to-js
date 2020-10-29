@@ -12,11 +12,19 @@
  */
 
 // Your code here.
-//
+function min(a, b) {
+  return Math.min(a, b);
+}
+
+function minArr(arr) {
+  return Math.min(...arr);
+}
+
 // Use these commands to test your code:
 //
-//console.log(min(0, 10));
+console.log(min(0, 10));
 // → 0
-// console.log(min(0, -10));
+console.log(min(0, -10));
 // → -10
+console.log(minArr([2, 4, -4, 10, 0, -9, 17]));
 //

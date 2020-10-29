@@ -9,5 +9,9 @@
 
 // Your code here.
 
-// console.log(reverseArray(["A", "B", "C"]));
+function reverseArray(arr) {
+  return arr.slice().reverse(); //slice() return a new array
+}
+
+console.log(reverseArray(["A", "B", "C"]));
 // → ["C", "B", "A"];
