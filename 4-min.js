@@ -12,11 +12,26 @@
  */
 
 // Your code here.
-//
-// Use these commands to test your code:
-//
-//console.log(min(0, 10));
-// → 0
-// console.log(min(0, -10));
-// → -10
-//
+
+// single array as argument:
+
+let arr = [];
+
+const minArr = (_arr) => {
+  const sorted = _arr.sort((a, b) => (a < b ? -1 : 1));
+
+  return sorted[0];
+};
+
+console.log(minArr([2, 4, -4, 10, 0, -9, 17]));
+
+
+// two numbers as arguments:
+
+const min = (num1, num2) => {
+	const result = (num1 < num2) ? num1 : num2;
+	
+  return result;
+}
+
+console.log(min(0, -10));
