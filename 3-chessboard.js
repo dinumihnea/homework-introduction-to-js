@@ -19,5 +19,15 @@
  * that it works for any size, outputting a grid of the given width and height.
  *
  */
-
-// Your code here.
+let width = 8;
+let height = 8
+let row = '';
+for(let i = 0; i < height; i++){
+    for(let j = 0; j < width; j++){
+        if((i % 2) === 0){
+         ((j % 2) === 0) ? row += '#' : row +=' ';
+        } else ((j % 2) === 0) ? row += ' ' : row +='#';
+    }
+    console.log(row);
+    row = '';
+}

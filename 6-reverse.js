@@ -7,7 +7,9 @@
  *
  */
 
-// Your code here.
+function reverseArray(arr){
+    return arr.reverse();
+}
 
-// console.log(reverseArray(["A", "B", "C"]));
+console.log(reverseArray(["A", "B", "C"]));
 // → ["C", "B", "A"];
