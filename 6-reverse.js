@@ -7,7 +7,16 @@
  *
  */
 
-// Your code here.
+function reverseArray(arr){
+    //caveman solution
+    const newArr = [];
+    arr.forEach(element => {
+        newArr.unshift(element);
+    });
+    return newArr;
+    //normal solution
+    // return arr.reverse();
+}
 
-// console.log(reverseArray(["A", "B", "C"]));
+console.log(reverseArray(["A", "B", "C"]));
 // → ["C", "B", "A"];
